@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+    <title>Code Quiz</title>
+    <link rel="stylesheet" href="style.css" />
+</head>
+
+<body>
+    <div class="container">
+
+        <div class="jumbotron text-center">
+            <h2 style="text-align:center"> Test Your Javascript Knowledge</h2>
+            <h4 style="text-align: center;"> Click Start to see if you can get high score</h4>
+            <br>
+            <div class="startQuiz">
+                <button id="startBtn">Start</button>
+            </div>
+            <br>
+            <p id="cDown" class="hide"> Time: <span id="time"> 0 </span></p>
+        </div>
+
+        <div class="row">
+            <div class="col-sm-12">
+                <h3 id="questions"> </h3>
+                <div id="btn"> </div>
+                <div id="quizQuestions"> </div>
+                <div id="correct" class="hide">
+                    <hr>
+                    <h5> That Answer is Correct!! </h5>
+                </div>
+                <div id="wrong" class="hide">
+                    <hr>
+                    <h5> That Answer is Incorrect! </h5>
+                </div>
+            </div>
+        </div>
+
+    </div>
+    <script src="script.js"> </script>
+
+</body>
+
+</html>
