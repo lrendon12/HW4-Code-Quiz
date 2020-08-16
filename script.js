@@ -3,7 +3,7 @@ var timer = document.getElementById("cDown");
 var timeLeft = document.getElementById("time");
 var questionLine = document.getElementById("questions");
 var choices = document.getElementById("btn");
-var clock = 60;
+var clock = 20;
 var gameTimer;
 var questionArray = [{
         question: "What is the DOM?",
@@ -44,7 +44,9 @@ var questionArray = [{
 
 
 ]
-
+var questionArrayIndex = 0;
+var result = document.getElementById("answer");
+var endScreenEl = document.getElementById("end-screen");
 
 
 startBtn.addEventListener("click", function () {
@@ -55,12 +57,13 @@ startBtn.addEventListener("click", function () {
 
 });
 startQuiz();{
-
 }
+// I have attempted many different ways to get the questions to star but I have been unsuccessful - therefore this is a waste of time for you  
+// if I had them working - i would add a for loop to cycle thru the questions and confirm answers are correct 
 
 function startQuiz() {
     gameTimer = setInterval(startTimer, 1000);
-    startQuestions();
+    // startQuestions();
 }
 
 function startTimer() {
@@ -69,13 +72,17 @@ function startTimer() {
     if (clock <= 0) {
         clock = 0;
         timeLeft.textContent = clock;
-        endQuiz();
+        // endQuiz();
     }
 }
 
 function endQuiz() {
     clearInterval(gameTimer);
-}
+    endScreenEl.style.display = "block";
+    finalScore.textContent = time;
+     var submitBtn = document.getElementById("submit");
+   submitBtn.onclick = function (event) {
+}}
 
 // function startQuestions() {
 //     questionArray.addEventListener("click", function () {
@@ -85,7 +92,7 @@ function endQuiz() {
 
 
 
-
+// this was my plan but i wasnt able to execute it 
 
 
 
@@ -94,4 +101,4 @@ function endQuiz() {
 //give each button their own onclick = to answer check function  - give value of buttons - give attribute of value 
 //inside answer checker function - if correct - can show correct/incorrect div - by removing adding class - use if/else stmt
 //after check answer increase global index & then run start questions function again 
-//set high  score page 
+//set high  score page
